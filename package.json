@@ -1,0 +1,22 @@
+{
+  "name": "todoist-v2-starting-files",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "loadsh": "^0.0.4",
+    "mongoose": "^8.5.2",
+    "nodemon": "^3.1.4"
+  }
+}
