@@ -21,9 +21,6 @@
       ]
     }
   ],
-  "env": {
-    "MONGODB_URI": "@mongodb_uri"
-  },
   "cleanUrls": true,
   "trailingSlash": false
 }
