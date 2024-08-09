@@ -6,20 +6,24 @@
       "use": "@vercel/node"
     }
   ],
-  "routes": [
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/$1" },
+    { "source": "/(.*)", "destination": "/public/$1" }
+  ],
+  "redirects": [
+    { "source": "/old-path", "destination": "/new-path", "permanent": true }
+  ],
+  "headers": [
     {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/public/$1"
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Custom-Header", "value": "value" }
+      ]
     }
   ],
   "env": {
     "MONGODB_URI": "@mongodb_uri"
   },
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
+  "cleanUrls": true,
+  "trailingSlash": false
 }
